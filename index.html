@@ -21,8 +21,6 @@
       --text: #e2e8f0;
       --accent: #dc3545; /* red */
       --accent-2: #f87171; /* light red */
-      --success: #22c55e;
-      --warn: #f59e0b;
       --shadow: 0 10px 30px rgba(220,53,69,.25);
       --radius: 22px;
     }
@@ -38,10 +36,11 @@
     .container{max-width:1200px;margin:0 auto;padding:24px}
     header{
       display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0 8px;
+      background:#1f2937;border-radius:14px;padding:12px
     }
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
     .badge{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(220,53,69,.15);color:#fca5a5;border:1px solid rgba(220,53,69,.35)}
-    .hero{display:grid;grid-template-columns:1.2fr .9fr;align-items:center;gap:32px;margin-top:28px}
+    .hero{display:grid;grid-template-columns:1.2fr .9fr;align-items:center;gap:32px;margin-top:28px;background:#111827;padding:24px;border-radius:20px}
     @media (max-width: 940px){.hero{grid-template-columns:1fr;}}
     .headline{
       font-family:Poppins, Inter, system-ui, sans-serif;
@@ -60,7 +59,14 @@
     .btn:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(220,53,69,.35)}
     .btn:active{transform:translateY(0)}
     .btn-secondary{background:transparent;color:#e2e8f0;border:1px solid rgba(148,163,184,.35)}
-    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(148,163,184,.08);border:1px solid rgba(148,163,184,.15);color:#cbd5e1;font-size:13px}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;font-size:13px;text-decoration:none}
+    .red-pill {
+      background: linear-gradient(135deg, #dc3545, #f87171);
+      border: 1px solid rgba(220,53,69,.35);
+      color: #fff !important;
+      font-weight: 700;
+    }
+    .red-pill:hover {box-shadow: 0 6px 16px rgba(220,53,69,.4);}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
     @media (max-width: 900px){.grid{grid-template-columns:1fr 1fr}}
     @media (max-width: 600px){.grid{grid-template-columns:1fr}}
@@ -72,7 +78,7 @@
     .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(600px 200px at 20% 0%, rgba(220,53,69,.20), transparent 60%),radial-gradient(600px 200px at 80% 100%, rgba(220,53,69,.12), transparent 60%)}
     .stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px}
     .stat{padding:10px 14px;border-radius:14px;background:rgba(220,53,69,.12);border:1px solid rgba(220,53,69,.25);font-weight:700;color:#fca5a5}
-    .footer{margin-top:48px;padding:22px;border-top:1px solid rgba(148,163,184,.15);color:#cbd5e1}
+    .footer{margin-top:48px;padding:22px;border-top:1px solid rgba(148,163,184,.15);color:#cbd5e1;background:#0f172a;border-radius:14px}
     .footgrid{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
     .small{font-size:13px;color:#9aa7bb}
     .contact{font-weight:800;color:#e2e8f0}
@@ -83,11 +89,6 @@
     details+details{margin-top:10px}
     summary{cursor:pointer;font-weight:700}
     summary::-webkit-details-marker{display:none}
-    /* Section color styles */
-    header{background:#1f2937;border-radius:14px;padding:12px}
-    .hero{background:#111827;padding:24px;border-radius:20px}
-    #learn-more{background:#1e3a8a;padding:24px;border-radius:20px}
-    footer{background:#0f172a;border-radius:14px}
   </style>
 </head>
 <body>
@@ -100,12 +101,13 @@
         <span>Masomo SMS</span>
         <span class="badge">Free Coursebook</span>
       </div>
-      <a class="pill" href="https://cutt.ly/masomoapp" target="_blank" rel="noopener">Download App • cutt.ly/masomoapp</a>
+      <!-- 🔴 Red pill button -->
+      <a class="pill red-pill" href="https://cutt.ly/masomoapp" target="_blank" rel="noopener">Download App • cutt.ly/masomoapp</a>
     </header>
 
     <section class="hero">
       <div>
-        <p class="pill floating" aria-label="Intro line">Your Choice, Your Wealth</p>
+        <p class="pill floating red-pill" aria-label="Intro line">Your Choice, Your Wealth</p>
         <h1 class="headline">Unlock the Potential in Your Phone and Turn Contacts into Income</h1>
         <p class="sub">Whether you’re a graduate or not, if you have a phone, you have a pathway to <strong>income, influence, and impact</strong>. This free coursebook shows you how to use the Masomo SMS App to earn from your network while spreading <strong>faith, motivation, and inspiration</strong>.</p>
         <div class="cta">
@@ -130,7 +132,7 @@
       </figure>
     </section>
 
-    <section id="learn-more" class="container" style="margin-top:34px">
+    <section id="learn-more" class="container" style="margin-top:34px;background:#1e3a8a;padding:24px;border-radius:20px">
       <div class="grid">
         <div class="card">
           <h3>Why this book?</h3>
@@ -169,8 +171,9 @@
           <div class="small">Need help?</div>
           <div class="contact">Call/WhatsApp: <a href="tel:+254715399449" style="color:#fca5a5;text-decoration:none">0715 399 449</a></div>
         </div>
+        <!-- 🔴 Red pill button -->
         <div>
-          <a class="pill" href="https://cutt.ly/masomoapp" target="_blank" rel="noopener">Download the Masomo SMS App</a>
+          <a class="pill red-pill" href="https://cutt.ly/masomoapp" target="_blank" rel="noopener">Download the Masomo SMS App</a>
         </div>
         <div class="small">© <span id="year"></span> Masomo SMS. All rights reserved.</div>
       </div>
